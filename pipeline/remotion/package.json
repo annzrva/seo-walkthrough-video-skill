@@ -1,0 +1,17 @@
+{
+  "name": "seo-walkthrough-video-remotion",
+  "private": true,
+  "scripts": {
+    "render": "remotion render src/index.ts Example out/example.mp4"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.526",
+    "@remotion/cli": "4.0.526"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.5.0"
+  }
+}

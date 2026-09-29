@@ -1,0 +1,62 @@
+[
+ {
+  "name": "hook",
+  "silent_seconds": 12,
+  "start_frame": 0,
+  "next_start_frame": 360
+ },
+ {
+  "name": "title",
+  "text": "Same person, four different scenes. Here's how to keep one character consistent across a whole AI video series.",
+  "start_frame": 360,
+  "next_start_frame": 612
+ },
+ {
+  "name": "presets",
+  "text": "Start in the varg agent. Open presets, go to characters, and pick one. This one is called Woman in Red.",
+  "start_frame": 612,
+  "next_start_frame": 864
+ },
+ {
+  "name": "prompt",
+  "text": "Then write the whole series in one message: the four scenes, and one rule. Keep her face, her haircut and her sweater exactly the same in every shot.",
+  "start_frame": 864,
+  "next_start_frame": 1166
+ },
+ {
+  "name": "cost",
+  "text": "You see an estimate before anything renders, and nothing runs until you approve it.",
+  "start_frame": 1166,
+  "next_start_frame": 1321
+ },
+ {
+  "name": "run",
+  "text": "The agent turns the character into a keyframe for each scene, then animates every one with MiniMax H3.",
+  "start_frame": 1321,
+  "next_start_frame": 1539
+ },
+ {
+  "name": "done",
+  "text": "When the render finishes, the whole series lands right in your project.",
+  "start_frame": 1539,
+  "next_start_frame": 1680
+ },
+ {
+  "name": "results",
+  "text": "Cafe, canal, record shop, rooftop. Four places, and it's the same person in every one.",
+  "start_frame": 1680,
+  "next_start_frame": 1925
+ },
+ {
+  "name": "tip",
+  "text": "The trick is to name what makes her recognizable, like the bob and the red sweater, and ask for it to stay the same. That's all I did here.",
+  "start_frame": 1925,
+  "next_start_frame": 2193
+ },
+ {
+  "name": "cta",
+  "text": "Pick a character and make your own series at varg dot A I.",
+  "start_frame": 2193,
+  "next_start_frame": 2332
+ }
+]

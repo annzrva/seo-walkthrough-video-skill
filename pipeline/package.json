@@ -1,0 +1,9 @@
+{
+  "name": "seo-walkthrough-video-capture",
+  "private": true,
+  "type": "module",
+  "description": "Playwright capture harness + research scripts for the seo-walkthrough-video skill",
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
+}

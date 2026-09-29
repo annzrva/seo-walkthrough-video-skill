@@ -1,0 +1,97 @@
+{
+ "slug": "V07-same-character-series",
+ "duration": 568.84,
+ "offset": 5.961,
+ "steps": [
+  {
+   "name": "start",
+   "note": "empty composer",
+   "at": 0.914,
+   "box": null,
+   "video_at": 6.875
+  },
+  {
+   "name": "presets",
+   "note": "character presets",
+   "at": 12.438,
+   "box": {
+    "x": 382,
+    "y": 180,
+    "width": 1156,
+    "height": 720
+   },
+   "video_at": 18.399
+  },
+  {
+   "name": "attached",
+   "note": "character preset attached",
+   "at": 19.331,
+   "box": {
+    "x": 640,
+    "y": 403.453125,
+    "width": 700,
+    "height": 340
+   },
+   "video_at": 25.292
+  },
+  {
+   "name": "prompt",
+   "note": "one message",
+   "at": 30.624,
+   "box": {
+    "x": 640,
+    "y": 361.453125,
+    "width": 700,
+    "height": 424
+   },
+   "video_at": 36.585
+  },
+  {
+   "name": "send",
+   "note": "",
+   "at": 30.634,
+   "box": null,
+   "video_at": 36.595
+  },
+  {
+   "name": "cost-0",
+   "note": "cost card",
+   "at": 55.144,
+   "box": {
+    "x": 1355,
+    "y": 432,
+    "width": 143.0625,
+    "height": 20
+   },
+   "video_at": 61.105
+  },
+  {
+   "name": "approved-1",
+   "note": "",
+   "at": 59.287,
+   "box": null,
+   "video_at": 65.248
+  },
+  {
+   "name": "results",
+   "note": "approvals=1 render=completed",
+   "at": 540.118,
+   "box": null,
+   "video_at": 546.079
+  },
+  {
+   "name": "review",
+   "note": "scroll through results",
+   "at": 543.151,
+   "box": null,
+   "video_at": 549.112
+  },
+  {
+   "name": "end",
+   "note": "",
+   "at": 566.362,
+   "box": null,
+   "video_at": 572.323
+  }
+ ]
+}

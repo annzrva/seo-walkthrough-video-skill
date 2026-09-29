@@ -1,0 +1,9 @@
+references/local.md
+node_modules/
+pipeline/capture/out/
+pipeline/remotion/out/
+pipeline/remotion/public/
+pipeline/vo/
+pipeline/auth-state*.json
+pipeline/chrome-profile/
+.DS_Store
