@@ -46,7 +46,8 @@ Setup: `cd pipeline && npm i && npx playwright install chromium`, `cd remotion &
 - One script per video, cloned from the example. `startCapture({ slug, storageState })` → `goto / clickEl / moveTo / mark / pause` → `finish()`. Mark every narration beat; scene timing and punch-in boxes come from `steps.json` (`video_at`).
 - Server-side renders outlive the chat turn: **follow the job through the API until it's terminal**, don't stop when the UI goes quiet.
 - Keep debug screenshots and the result URLs. If the take fails, it was the rehearsal — fix and re-run.
-- Terminal/API videos: a real shell in the browser via `ttyd -i 127.0.0.1` (localhost only), recorded with the same harness. Never print a key on screen — load it from a file.
+- Terminal/API videos: a real shell in the browser via `ttyd -i 127.0.0.1` (localhost only), recorded with the same harness. Never print a key on screen — load it from a file. xterm draws to a canvas, so `innerText` is empty — detect progress from the filesystem or the API, not the screen text.
+- Filming Claude Code itself: use a separate `CLAUDE_CONFIG_DIR` holding only the skills you want on camera (log in once), clear its first-run dialogs before recording, and run it from a folder **outside your home directory** — parent directories are searched for CLAUDE.md, so `~/.claude/CLAUDE.md` would otherwise load as a project file (personal instructions, language, contacts).
 
 ### 4. Check the result before editing
 - Contact sheet of the generated video (consistency, artifacts, **real brands/logos** — re-run "unbranded" if any appear).
@@ -66,6 +67,7 @@ Setup: `cd pipeline && npm i && npx playwright install chromium`, `cd remotion &
 - Config in `remotion/src/videos/<id>.tsx`, registered in `Root.tsx`, `captions: "phrases"`.
 - **Open with the result** playing with its sound — each shot 2.5–4 s, a speaking shot long enough to finish its line.
 - Crop out anything private: sidebars (admin links, project names, email), balance chips, the account's other files. Attach files by dropping them onto the input rather than opening a file-library dialog.
+- Long captures: pre-cut each scene's segment with ffmpeg (`-ss … -t … -vf setpts=PTS/<speed>`, `-g 15`) and point the clip at it (`src`, `from: 0`) — seeking an 11-minute file at 6× makes Remotion's frame fetches time out.
 - Check stills before rendering: `npx remotion still src/index.ts <Comp> out/x.png --frame=<n>`.
 - Render + mix:
   ```bash

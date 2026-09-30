@@ -31,6 +31,9 @@ export type Scene =
       minW?: number;
       rate?: number;           // playback rate; slow a static screen to cover longer narration
       rect?: Rect;             // explicit override when the recorded box is off-screen
+      src?: string;            // pre-cut segment (already speed-adjusted) instead of cfg.src — long
+                               // captures + high playback rates make Remotion's seeks time out
+      from?: number;           // start time in src; overrides the step-based start
       caption: { step?: number; text: string; sub?: string };
       vo?: string;
     }
@@ -158,8 +161,8 @@ const SceneBody: React.FC<{ scene: Scene; cfg: VideoConfig }> = ({ scene, cfg })
     return (
       <SceneFade duration={scene.frames}>
         <ScreenClip
-          src={cfg.src}
-          startFrom={Math.max(0, st.video_at - (scene.lead ?? 0))}
+          src={scene.src ?? cfg.src}
+          startFrom={scene.from ?? Math.max(0, st.video_at - (scene.lead ?? 0))}
           focus={from}
           focusTo={to}
           playbackRate={scene.rate ?? 1}
